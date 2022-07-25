@@ -44,7 +44,7 @@ class PlantController extends Controller
 
             Humidity::create([
                 'plant_id' => $plant->id,
-                'humidity' => $data[1]
+                'humidity' => rand(60,100)
             ]);
 
             WaterDistance::create([
