@@ -25,27 +25,27 @@ class DatabaseSeeder extends Seeder
         for ($i=0; $i < 50; $i++) {
             Brightness::create([
                 'plant_id' => 1,
-                'brightness' => rand(0, 10),
+                'brightness' => rand(0, 100),
             ]);
 
             PlantTemperature::create([
                 'plant_id' => 1,
-                'temperature' =>  rand(0, 10)
+                'temperature' =>  rand(24.5, 32.5)
             ]);
 
             Humidity::create([
                 'plant_id' => 1,
-                'humidity' => rand(0, 10)
+                'humidity' => rand(0, 100)
             ]);
 
             WaterDistance::create([
                 'plant_id' => 1,
-                'distace' => rand(0, 10)
+                'distace' => rand(0, 100)
             ]);
 
             WaterTemperature::create([
                 'plant_id' => 1,
-                'temperature' => rand(0, 10)
+                'temperature' => rand(0, 100)
             ]);
 
             WaterPump::create([

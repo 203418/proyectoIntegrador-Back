@@ -21,7 +21,6 @@ class PlantController extends Controller
             ->with('Humidity')
             ->with('WaterDistance')
             ->with('Brightness')
-            ->with('Brightness')
             ->with('WaterTemperature')
             ->with('WaterPump')
         ->first();
@@ -50,12 +49,12 @@ class PlantController extends Controller
 
             WaterDistance::create([
                 'plant_id' => $plant->id,
-                'distace' => $data[2]
+                'distace' => rand(20,100)
             ]);
 
             Brightness::create([
                 'plant_id' => $plant->id,
-                'brightness' => $data[3]
+                'brightness' => rand(-100, 100)
             ]);
 
             WaterTemperature::create([
